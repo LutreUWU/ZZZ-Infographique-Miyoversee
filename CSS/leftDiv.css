@@ -1,0 +1,151 @@
+.LeftDiv{
+    width: 45%;
+    height: 100%;
+    background:
+    repeating-linear-gradient(-35deg, #ffffff50, #ffffff50 40px, transparent 5px, transparent 130px);
+    position: relative;
+    font-family: "Paytone One", sans-serif;
+    overflow: hidden;
+}
+
+.LeftDiv::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 10%;
+    background: linear-gradient(to bottom, var(--c1) 0%, var(--c2) 100% );
+    top: 0;
+    --mask:
+    radial-gradient(34.24px at 50% calc(100% - 46.5px),#000 99%,#0000 101%) calc(50% - 60px) 0/120px 100%,
+    radial-gradient(34.24px at 50% calc(100% + 16.5px),#0000 99%,#000 101%) 50% calc(100% - 30px)/120px 100% repeat-x;
+    -webkit-mask: var(--mask);
+          mask: var(--mask);
+    z-index: -1;
+}
+
+
+.LeftDiv::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 10%;
+    background: linear-gradient(to top, var(--c1) 0%, var(--c2) 100% );
+    bottom: 0;
+    left: 0;
+    --mask:
+    radial-gradient(35.78px at 50% 49.5px,#000 99%,#0000 101%) calc(50% - 60px) 0/120px 100%,
+    radial-gradient(35.78px at 50% -19.5px,#0000 99%,#000 101%) 50% 30px/120px 100% repeat-x;
+    -webkit-mask: var(--mask);
+          mask: var(--mask);
+    z-index: -1;
+}
+
+.CharacterName{
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 3%;
+    left: 50%;
+    transform: translate(-50%) rotate(-2deg);
+    text-shadow: 0 0 10px white;
+    white-space: nowrap;
+    font-weight: bold;
+    padding: 0 2%;
+    color: rgb(24, 23, 23);
+    margin: 0;
+    z-index: 2;
+}
+
+.CharacterName::before{
+    content:"";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 110%;
+    height: 100%;
+    z-index: -1;
+    border: 10px double rgb(0, 0, 0);
+    background-color: white;
+    box-shadow: -2px 5px 1px black;
+}
+
+
+
+.CharacterIMG{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+    object-fit: cover;
+    object-position:center;
+    filter: drop-shadow(-5px 5px 1px var(--c1)); 
+}
+
+.gangDiv{
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 5.5%;
+    top: 1%;
+    color: white;
+    font-size: 0.8em;
+    text-shadow: 0px 3px 1px black;
+    z-index: 1;
+}
+
+.gangIMG{
+    filter: drop-shadow(0px 0px 3px black); 
+    height: 150%;
+}
+
+.gangIMG:nth-child(1){
+    margin-left: 6.8%;
+    margin-top: 0%;
+}
+
+.gangIMG:nth-child(3){
+    position: absolute;
+    right: 9%;
+    top: -13%;
+    transform: scale(0.9);
+}
+
+.gangIMG:nth-child(4){
+    position: absolute;
+    right: 0;
+    top: -13%;
+    transform: scale(0.9);
+}
+
+
+.gangDiv::after{
+    content: "Crée par Davideuh";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 278%;
+    left: 5%;
+    transform: rotate(-35deg);
+    transform-origin:left;
+    font-size: 0.7em;
+    opacity: 0.5;
+    z-index: 1;
+}
+
+.citationDiv{
+    color: white;
+    position: absolute;
+    width: 100%;
+    height: 9%;
+    bottom: 0;
+    background-image: repeating-linear-gradient(45deg, rgba(128, 128, 128, 0.1) 0, rgba(128, 128, 128, 0.1) 2px, transparent 0, transparent 50%);
+    background-size: 10px 10px;
+    background-color: rgba(0, 0, 0, 0.8);
+    text-shadow: 0px 3px 1px black;
+    text-align: center;
+}
